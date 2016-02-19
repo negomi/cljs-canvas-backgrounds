@@ -32,6 +32,14 @@
   [width index]
   {:row (.floor js/Math (/ index width)), :col (mod index width)})
 
+(defn render-all!
+  [canvas]
+  (.renderAll canvas canvas))
+
+(defn set-background-color!
+  [canvas color]
+  (.setBackgroundColor canvas color (partial render-all! canvas)))
+
 (defn add-to-canvas!
   [canvas content]
   (.add canvas content))
