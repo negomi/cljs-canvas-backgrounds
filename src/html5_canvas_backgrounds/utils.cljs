@@ -18,15 +18,17 @@
 
 (defn height-in-units
   [canvas unit-size]
-  (+ 1 (.round js/Math (/ (.-height canvas) unit-size))))
+  (+ 3 (.round js/Math (/ (.-height canvas) unit-size))))
 
 (defn width-in-units
   [canvas unit-size]
-  (+ 1 (.round js/Math (/ (.-width canvas) unit-size))))
+  (+ 3 (.round js/Math (/ (.-width canvas) unit-size))))
 
 (defn total-units
-  [canvas unit-size]
-  (* (height-in-units canvas unit-size) (width-in-units canvas unit-size)))
+  ([canvas unit-size]
+   (* (height-in-units canvas unit-size) (width-in-units canvas unit-size)))
+  ([canvas width height]
+   (* (height-in-units canvas height) (width-in-units canvas width))))
 
 (defn coords
   [width index]
