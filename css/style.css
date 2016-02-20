@@ -1,15 +1,103 @@
+body {
+  color: #222;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #222;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+p {
+  margin: 1rem 0 2rem;
+}
+
 #demo-canvas {
   vertical-align: top;
 }
 
 header {
+  position: relative;
 }
 
 .header-content {
   position: absolute;
   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
+  padding: 2rem;
+  box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.7);
 
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+
+  padding-bottom: 2rem;
+}
+
+.pattern-link {
+  padding: 1rem;
+  border: 2px #222 solid;
+}
+
+/******************************* Logos *******************************/
+
+.logo {
+  display: none;
+}
+
+.logo.checkerboard h1 {
+  transform: rotate(-10deg) skewX(-6deg);
+
+  color: #00DDFF;
+  font-family: 'Pacifico', cursive;
+  font-size: 8rem;
+  text-shadow: 2px 2px 2px #222;
+}
+
+.logo.checkerboard::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 25rem;
+  width: 25rem;
+  border: 1rem #00DDFF solid;
+  border-radius: 50%;
+  margin: auto;
+
+  content: "";
+}
+
+.logo.polkadot h1 {
+  padding: 4rem;
+  border: 1rem #332929 double;
+
+  color: #332929;
+  font-family: 'Abril Fatface', serif;
+  font-size: 8rem;
+}
+
+.logo.mosaic h1 {
+  height: 100%;
+  background: rgba(235, 235, 235, 0.8);
+
+  color: #222;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 10rem;
 }
