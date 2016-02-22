@@ -15,13 +15,13 @@
   :plugins [[lein-figwheel "0.5.0-6"]
             [lein-cljsbuild "1.1.2" :exclusions [[org.clojure/clojure]]]]
 
-  :source-paths ["src"]
+  :source-paths ["src/cljs"]
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
 
   :cljsbuild {:builds
               [{:id "dev"
-                :source-paths ["src"]
+                :source-paths ["src/cljs"]
 
                 ;; If code is to be run, set :figwheel {:on-jsload "html5-canvas-backgrounds.core/on-js-reload"}
                 :figwheel true
@@ -35,7 +35,7 @@
                ;; production. You can build this with:
                ;; lein cljsbuild once min
                {:id "min"
-                :source-paths ["src"]
+                :source-paths ["src/cljs"]
                 :compiler {:output-to "resources/public/js/compiled/html5_canvas_backgrounds.js"
                            :main html5-canvas-backgrounds.core
                            :optimizations :advanced
