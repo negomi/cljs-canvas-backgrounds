@@ -1,11 +1,32 @@
 # html5-canvas-backgrounds
 
-Geometric repeating patterns for the HTML5 Canvas, built on [Fabric.js](http://fabricjs.com/) and written in ClojureScript.
+Geometric repeating patterns for the HTML5 Canvas, written in ClojureScript.
 
-This project is framework agnostic so the backgrounds can be easily included in any JavaScript application.
+They use [Fabric.js](http://fabricjs.com/) but are otherwise framework agnostic, so can be easily included in any JavaScript project.
 
 ## Usage
 
+```
+npm install html5-canvas-backgrounds --save
+```
+
+Load the script at `resources/public/js/compiled/html5_canvas_backgrounds.js` in your project.
+
+This will give you a global `html5_canvas_backgrounds` object, with the backgrounds as properties. Each has a `draw` function which you need to call, passing an options object, containing at least the `id` of your canvas element.
+
+So, to initialize the checkerboard background:
+
+`html5_canvas_backgrounds.checkerboard.draw({ id: "my-canvas-id" });`
+
+Replace the name to use a different background.
+
+## Other options
+
+|Background |`colors` |`size` |`spacing` |`width` |`height` |
+|-----------|---------|-------|----------|--------|---------|
+|`checkerboard` |Array of strings, max. 2 |Number (size of squares) ||||
+|`polkadot` |Array of strings, max. 2 |Number (size of dots) |Number (space between dots) |||
+|`mosaic` |Array of strings, no max. |||Number (width of triangles) |Number (height of triangles) |
 
 ## Running locally
 
