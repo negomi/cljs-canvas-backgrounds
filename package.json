@@ -1,11 +1,11 @@
 {
   "name": "html5-canvas-backgrounds",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Geometric repeating patterns for the HTML5 Canvas",
   "main": "resources/public/js/compiled/html5_canvas_backgrounds.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm publish & git subtree push --prefix resources/public origin gh-pages"
+    "deploy": "npm publish && git subtree push --prefix resources/public origin gh-pages"
   },
   "repository": {
     "type": "git",
