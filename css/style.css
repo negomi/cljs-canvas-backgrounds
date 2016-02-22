@@ -13,12 +13,19 @@ p {
   margin: 1rem 0 2rem;
 }
 
-#demo-canvas {
-  vertical-align: top;
-}
-
 header {
   position: relative;
+  display: none;
+}
+
+header.snowfall {
+  background-image: url('../img/snow-forest-trees-winter.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+canvas {
+  vertical-align: top;
 }
 
 .header-content {
@@ -35,7 +42,7 @@ header {
 
 .content {
   padding: 2rem;
-  box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.7);
+  box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.7);
 
   text-align: center;
 }
@@ -52,13 +59,64 @@ header {
   border: 2px #222 solid;
 }
 
-/******************************* Logos *******************************/
+/******************************* Loader *******************************/
 
-.logo {
-  display: none;
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 660px;
+  background: #222;
 }
 
-.logo.checkerboard h1 {
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.8em solid rgba(255, 255, 255, 0.2);
+  border-right: 0.8em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.8em solid rgba(255, 255, 255, 0.2);
+  border-left: 0.8em solid #fff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 6em;
+  height: 6em;
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/******************************* Logos *******************************/
+
+.checkerboard .logo h1 {
   transform: rotate(-10deg) skewX(-6deg);
 
   color: #00DDFF;
@@ -67,7 +125,7 @@ header {
   text-shadow: 2px 2px 2px #222;
 }
 
-.logo.checkerboard::before {
+.checkerboard .logo::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -83,7 +141,7 @@ header {
   content: "";
 }
 
-.logo.polkadot h1 {
+.polkadot .logo h1 {
   padding: 4rem;
   border: 1rem #332929 double;
 
@@ -92,12 +150,28 @@ header {
   font-size: 8rem;
 }
 
-.logo.mosaic h1 {
-  height: 100%;
+.mosaic .logo h1 {
   background: rgba(235, 235, 235, 0.8);
 
   color: #222;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 10rem;
+}
+
+.snowfall .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 10rem;
+  width: 10rem;
+  background: #222;
+  border-radius: 50%;
+}
+
+.snowfall .logo h1 {
+  color: snow;
+  font-family: 'Dosis', sans-serif;
+  font-size: 2rem;
 }

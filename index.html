@@ -4,22 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/reset.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Pacifico|Abril+Fatface" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Pacifico|Abril+Fatface|Dosis:200" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <header>
-      <canvas id="demo-canvas">Canvas not supported</canvas>
+    <div id="loader" class="loader-wrapper">
+      <div class="loader">Loading...</div>
+    </div>
+    <header class="checkerboard">
+      <canvas id="checkerboard-canvas">Canvas not supported</canvas>
       <div class="header-content">
-        <div class="logo checkerboard">
+        <div class="logo">
           <h1>Checkerboard</h1>
         </div>
-        <div class="logo polkadot">
+      </div>
+    </header>
+    <header class="polkadot">
+      <canvas id="polkadot-canvas">Canvas not supported</canvas>
+      <div class="header-content">
+        <div class="logo">
           <h1>Polkadot</h1>
         </div>
-        <div class="logo mosaic">
-          <h1>MOSAIC</h1>
+      </div>
+    </header>
+    <header class="mosaic">
+      <canvas id="mosaic-canvas">Canvas not supported</canvas>
+      <div class="header-content">
+        <div class="logo">
+          <h1>Mosaic</h1>
+        </div>
+      </div>
+    </header>
+    <header class="snowfall">
+      <canvas id="snowfall-canvas">Canvas not supported</canvas>
+      <div class="header-content">
+        <div class="logo">
+          <h1>Snowfall</h1>
         </div>
       </div>
     </header>
@@ -28,6 +49,7 @@
         <a href="" class="pattern-link" id="checkerboard">CHECKERBOARD</a>
         <a href="" class="pattern-link" id="polkadot">POLKADOT</a>
         <a href="" class="pattern-link" id="mosaic">MOSAIC</a>
+        <a href="" class="pattern-link" id="snowfall">SNOWFALL</a>
       </div>
       <p>Geometric repeating patterns for the HTML5 Canvas.</p>
       <a href="https://github.com/negomi/html5-canvas-backgrounds/"><i class="fa fa-github fa-3x"></i></a>
