@@ -1,0 +1,26 @@
+{
+  "name": "html5-canvas-backgrounds",
+  "version": "1.0.0",
+  "description": "Geometric repeating patterns for the HTML5 Canvas",
+  "main": "resources/public/js/compiled/html5_canvas_backgrounds.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/negomi/html5-canvas-backgrounds.git"
+  },
+  "keywords": [
+    "HTML5",
+    "Canvas",
+    "patterns",
+    "backgrounds",
+    "ClojureScript"
+  ],
+  "author": "Imogen Wentworth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/negomi/html5-canvas-backgrounds/issues"
+  },
+  "homepage": "https://github.com/negomi/html5-canvas-backgrounds#readme"
+}
