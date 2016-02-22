@@ -1,6 +1,16 @@
 (ns html5-canvas-backgrounds.utils
   (:require cljsjs.fabric))
 
+(defn linear-easing
+  "Linear easing function."
+  [t b c d]
+  (+ b (/ (* c t) d)))
+
+(defn rand-range
+  "Return a random integer within a given range."
+  [min max]
+  (+ min (rand-int (- max min))))
+
 (defn new-canvas
   "Create new canvas."
   [id]
@@ -8,8 +18,9 @@
 
 (defn new-shape
   "Create new shape."
-  [shape opts]
+  [shape opts & [coords]]
   (case shape
+    "Line" (js/fabric.Line. (clj->js coords) (clj->js opts))
     "Rect" (js/fabric.Rect. (clj->js opts))
     "Circle" (js/fabric.Circle. (clj->js opts))
     "Triangle" (js/fabric.Triangle. (clj->js opts))))
@@ -41,6 +52,16 @@
   [width index]
   {:row (.floor js/Math (/ index width)), :col (mod index width)})
 
+(defn set-gradient!
+  "Set gradient for a given shape."
+  [shape type opts]
+  (.setGradient shape type (clj->js opts)))
+
+(defn animate-shape!
+  "Animate a given shape."
+  [shape props opts]
+  (.animate shape (clj->js props) (clj->js opts)))
+
 (defn render-all!
   "Force render after change to canvas."
   [canvas]
@@ -55,3 +76,8 @@
   "Add shape(s) to canvas."
   [canvas content]
   (.add canvas content))
+
+(defn remove-from-canvas!
+  "Remove shape(s) from canvas."
+  [canvas content]
+  (.remove canvas content))

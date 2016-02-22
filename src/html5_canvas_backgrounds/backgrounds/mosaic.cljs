@@ -7,7 +7,7 @@
                         "#EEEEE7"
                         "#CCDDDD"
                         "#9EAEB3"
-                        "#242E35"]})
+                        "#412E8C"]})
 
 (defn fill
   [pos colors]

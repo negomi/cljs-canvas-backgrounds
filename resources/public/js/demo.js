@@ -1,36 +1,40 @@
 var Demo = (function() {
-  var canvas = document.getElementById("demo-canvas");
-  var buttons = document.querySelector(".buttons");
-  var defaultBackground = "checkerboard";
-
   return {
-    setCanvasSize: function() {
+    buttons: document.querySelector(".buttons"),
+    headers: document.getElementsByTagName("header"),
+    setCanvasSize: function(canvas) {
       canvas.width = window.innerWidth;
       canvas.height = 660;
     },
-    setCanvasBackground: function(background) {
-      html5_canvas_backgrounds[background].draw({ id: "demo-canvas" });
+    setCanvasBackground: function(background, id) {
+      html5_canvas_backgrounds[background].draw({ id: id });
     },
-    setLogo: function(background) {
-      var logos = document.getElementsByClassName("logo");
-
-      Array.prototype.forEach.call(logos, function(logo) {
-        if (Array.prototype.indexOf.call(logo.classList, background) > -1) {
-          logo.style.display = "block";
+    initializeHeaders: function(defaultBackground) {
+      Array.prototype.forEach.call(this.headers, function(header) {
+        var canvasId = header.className + "-canvas";
+        var canvas = document.getElementById(canvasId);
+        this.setCanvasSize(canvas);
+        this.setCanvasBackground(header.className, canvasId);
+      }.bind(this));
+      this.updateHeader(defaultBackground);
+      document.getElementById("loader").style.display = "none";
+    },
+    updateHeader: function(activeBackground) {
+      Array.prototype.forEach.call(this.headers, function(header) {
+        if (header.className === activeBackground) {
+          header.style.display = "block";
         } else {
-          logo.style.display = "none";
+          header.style.display = "none";
         }
       });
     },
     run: function() {
-      this.setCanvasSize();
-      this.setCanvasBackground(defaultBackground);
-      this.setLogo(defaultBackground);
-
-      buttons.addEventListener("click", function(e) {
+      this.initializeHeaders("checkerboard");
+      this.buttons.addEventListener("click", function(e) {
         e.preventDefault();
-        this.setCanvasBackground(e.target.id);
-        this.setLogo(e.target.id);
+        if (e.target.nodeName === "A") {
+          this.updateHeader(e.target.id);
+        }
       }.bind(this));
     }
   }
