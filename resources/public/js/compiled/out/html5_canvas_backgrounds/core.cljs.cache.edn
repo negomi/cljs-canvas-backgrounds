@@ -1,2 +1,0 @@
-;; Analyzed by ClojureScript 1.7.170
-{:name html5-canvas-backgrounds.core, :doc nil, :excludes #{}, :use-macros nil, :require-macros nil, :uses nil, :requires {html5-canvas-backgrounds.checkerboard html5-canvas-backgrounds.checkerboard, html5-canvas-backgrounds.polkadot html5-canvas-backgrounds.polkadot, html5-canvas-backgrounds.mosaic html5-canvas-backgrounds.mosaic, html5-canvas-backgrounds.snowfall html5-canvas-backgrounds.snowfall}, :imports nil}
