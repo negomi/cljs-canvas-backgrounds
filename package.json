@@ -1,6 +1,6 @@
 {
   "name": "html5-canvas-backgrounds",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Geometric repeating patterns for the HTML5 Canvas",
   "main": "resources/public/js/compiled/html5_canvas_backgrounds.js",
   "scripts": {
