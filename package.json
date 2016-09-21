@@ -16,7 +16,9 @@
     "Canvas",
     "patterns",
     "backgrounds",
-    "ClojureScript"
+    "ClojureScript",
+    "Clojure",
+    "cljs"
   ],
   "author": "Imogen Wentworth",
   "license": "MIT",
