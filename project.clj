@@ -6,14 +6,14 @@
 
   :min-lein-version "2.5.3"
 
-  :dependencies [[org.clojure/clojure "1.7.0"]
-                 [org.clojure/clojurescript "1.7.170"]
-                 [org.clojure/core.async "0.2.374"
-                  :exclusions [org.clojure/tools.reader]]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [org.clojure/clojurescript "1.9.229"]
+                 [org.clojure/core.async "0.2.391" :exclusions [org.clojure/tools.reader]]
                  [cljsjs/fabric "1.5.0-0"]]
 
   :plugins [[lein-figwheel "0.5.0-6"]
-            [lein-cljsbuild "1.1.2" :exclusions [[org.clojure/clojure]]]]
+            [lein-cljsbuild "1.1.2" :exclusions [org.clojure/clojure]]
+            [lein-ancient "0.6.10"]]
 
   :source-paths ["src/cljs"]
 
