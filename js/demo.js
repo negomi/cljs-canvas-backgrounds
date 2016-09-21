@@ -7,7 +7,7 @@ var Demo = (function() {
       canvas.height = 660;
     },
     setCanvasBackground: function(background, id) {
-      html5_canvas_backgrounds[background].draw({ id: id });
+      cljs_canvas_backgrounds[background].draw({ id: id });
     },
     initializeHeaders: function(defaultBackground) {
       Array.prototype.forEach.call(this.headers, function(header) {
