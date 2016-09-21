@@ -1,5 +1,5 @@
-(ns html5-canvas-backgrounds.mosaic
-  (:require [html5-canvas-backgrounds.utils :as utils]))
+(ns cljs-canvas-backgrounds.mosaic
+  (:require [cljs-canvas-backgrounds.utils :as utils]))
 
 (def defaults {:width 39,
                :height 49,

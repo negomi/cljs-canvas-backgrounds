@@ -1,5 +1,5 @@
-(ns html5-canvas-backgrounds.core
-  (:require html5-canvas-backgrounds.checkerboard
-            html5-canvas-backgrounds.polkadot
-            html5-canvas-backgrounds.mosaic
-            html5-canvas-backgrounds.snowfall))
+(ns cljs-canvas-backgrounds.core
+  (:require cljs-canvas-backgrounds.checkerboard
+            cljs-canvas-backgrounds.polkadot
+            cljs-canvas-backgrounds.mosaic
+            cljs-canvas-backgrounds.snowfall))

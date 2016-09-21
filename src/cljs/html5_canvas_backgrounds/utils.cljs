@@ -1,4 +1,4 @@
-(ns html5-canvas-backgrounds.utils
+(ns cljs-canvas-backgrounds.utils
   (:require cljsjs.fabric))
 
 (defn linear-easing

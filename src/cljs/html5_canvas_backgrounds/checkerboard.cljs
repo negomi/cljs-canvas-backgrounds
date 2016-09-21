@@ -1,5 +1,5 @@
-(ns html5-canvas-backgrounds.checkerboard
-  (:require [html5-canvas-backgrounds.utils :as utils]))
+(ns cljs-canvas-backgrounds.checkerboard
+  (:require [cljs-canvas-backgrounds.utils :as utils]))
 
 (def defaults {:size 30,
                :colors ["black" "white"]})

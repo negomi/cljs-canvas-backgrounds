@@ -1,5 +1,5 @@
-(ns html5-canvas-backgrounds.snowfall
-  (:require [html5-canvas-backgrounds.utils :as utils]))
+(ns cljs-canvas-backgrounds.snowfall
+  (:require [cljs-canvas-backgrounds.utils :as utils]))
 
 (def offset -10)
 (def fall-angle 50)

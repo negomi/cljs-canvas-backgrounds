@@ -1,6 +1,6 @@
-(defproject html5-canvas-backgrounds "0.1.0-SNAPSHOT"
+(defproject cljs-canvas-backgrounds "0.1.0-SNAPSHOT"
   :description "Geometric repeating patterns for the HTML5 Canvas"
-  :url "https://github.com/negomi/html5-canvas-backgrounds"
+  :url "https://github.com/negomi/cljs-canvas-backgrounds"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
@@ -23,12 +23,12 @@
               [{:id "dev"
                 :source-paths ["src/cljs"]
 
-                ;; If code is to be run, set :figwheel {:on-jsload "html5-canvas-backgrounds.core/on-js-reload"}
+                ;; If code is to be run, set :figwheel {:on-jsload "cljs-canvas-backgrounds.core/on-js-reload"}
                 :figwheel true
 
-                :compiler {:main html5-canvas-backgrounds.core
+                :compiler {:main cljs-canvas-backgrounds.core
                            :asset-path "js/compiled/out"
-                           :output-to "resources/public/js/compiled/html5_canvas_backgrounds.js"
+                           :output-to "resources/public/js/compiled/cljs_canvas_backgrounds.js"
                            :output-dir "resources/public/js/compiled/out"
                            :source-map-timestamp true}}
                ;; This next build is an compressed minified build for
@@ -36,8 +36,8 @@
                ;; lein cljsbuild once min
                {:id "min"
                 :source-paths ["src/cljs"]
-                :compiler {:output-to "resources/public/js/compiled/html5_canvas_backgrounds.js"
-                           :main html5-canvas-backgrounds.core
+                :compiler {:output-to "resources/public/js/compiled/cljs_canvas_backgrounds.js"
+                           :main cljs-canvas-backgrounds.core
                            :optimizations :advanced
                            :pretty-print false}}]}
 

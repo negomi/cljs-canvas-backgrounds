@@ -1,5 +1,5 @@
-(ns html5-canvas-backgrounds.polkadot
-  (:require [html5-canvas-backgrounds.utils :as utils]))
+(ns cljs-canvas-backgrounds.polkadot
+  (:require [cljs-canvas-backgrounds.utils :as utils]))
 
 (def defaults {:size 10,
                :spacing 60,
